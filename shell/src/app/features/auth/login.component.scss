@@ -1,43 +1,186 @@
-.login {
-  max-width: 420px;
-  margin: 4rem auto;
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.login-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   padding: 2rem;
-  border: 1px solid #e2e8f0;
-  border-radius: 1rem;
-  background: #fff;
+
+  background: linear-gradient(
+    135deg,
+    #f8fafc 0%,
+    #eef2ff 50%,
+    #f8fafc 100%
+  );
 }
 
-.login h1 {
-  margin: 0 0 0.5rem;
+/* Decorative background circles */
+.login-page__glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
 }
 
-.login p {
-  margin: 0 0 1.5rem;
+.login-page__glow--one {
+  width: 320px;
+  height: 320px;
+  top: -80px;
+  left: -80px;
+  background: #6366f1;
+}
+
+.login-page__glow--two {
+  width: 380px;
+  height: 380px;
+  right: -100px;
+  bottom: -100px;
+  background: #06b6d4;
+}
+
+.login-page__shell {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 1100px;
+
+  display: grid;
+  grid-template-columns: 1fr 460px;
+  gap: 3rem;
+
+  align-items: center;
+}
+
+.login-page__brand {
+  padding-right: 2rem;
+}
+
+.brand-mark {
+  width: 64px;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #4f46e5,
+    #2563eb
+  );
+
+  margin-bottom: 1.5rem;
+}
+
+.login-page__brand h1 {
+  margin: 0 0 1rem;
+
+  font-size: 3rem;
+  line-height: 1.1;
+
+  color: #0f172a;
+}
+
+.login-page__brand p {
+  margin: 0 0 2rem;
+
+  font-size: 1.1rem;
   color: #475569;
 }
 
-.login form {
-  display: grid;
-  gap: 1rem;
+.login-page__brand ul {
+  padding-left: 1.25rem;
+  margin: 0;
 }
 
-.login label {
-  display: grid;
-  gap: 0.35rem;
+.login-page__brand li {
+  margin-bottom: 1rem;
+  color: #334155;
 }
 
-.login input,
-.login select {
-  padding: 0.75rem 0.9rem;
-  border: 1px solid #cbd5e1;
-  border-radius: 0.75rem;
+.login-card {
+  border-radius: 24px;
+  overflow: hidden;
 }
 
-.login button {
-  padding: 0.8rem 1rem;
-  border: 0;
-  border-radius: 0.75rem;
-  background: #0f172a;
-  color: #fff;
-  cursor: pointer;
+.login-header {
+  margin-bottom: 1.5rem;
+}
+
+.login-header h2 {
+  margin: 0 0 0.5rem;
+  color: #0f172a;
+}
+
+.login-header p {
+  margin: 0;
+  color: #64748b;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.field label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.login-footer {
+  margin-top: 1.5rem;
+
+  text-align: center;
+  font-size: 0.85rem;
+
+  color: #64748b;
+}
+
+/* PrimeNG controls full width */
+:host ::ng-deep .p-inputtext,
+:host ::ng-deep .p-select {
+  width: 100%;
+}
+
+:host ::ng-deep .p-button {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .login-page__shell {
+    grid-template-columns: 1fr;
+  }
+
+  .login-page__brand {
+    display: none;
+  }
+
+  .login-card {
+    max-width: 480px;
+    margin: 0 auto;
+  }
 }

@@ -1,0 +1,59 @@
+<div class="shell">
+  <aside class="shell__sidebar">
+    <div class="shell__brand">
+      <div class="shell__brand-mark">CS</div>
+      <div>
+        <h1>Customer Support Portal</h1>
+        <p>Support operations workspace</p>
+      </div>
+    </div>
+
+    <nav class="shell__nav">
+      <a
+        *ngFor="let item of visibleNavItems()"
+        [routerLink]="item.route"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: item.route === '/dashboard' }"
+        class="shell__nav-item"
+      >
+        <i [class]="item.icon"></i>
+        <span>{{ item.label }}</span>
+      </a>
+    </nav>
+
+    <!-- Signed-in user block -->
+    <div class="shell__sidebar-footer" *ngIf="user() as currentUser">
+      <div class="shell__avatar">
+        {{ initials(currentUser.name) }}
+      </div>
+
+      <div class="shell__sidebar-user">
+        <strong>{{ currentUser.name }}</strong>
+        <small>{{ currentUser.role | titlecase }}</small>
+      </div>
+
+      <button type="button" class="shell__logout" (click)="logout()">
+        <i class="pi pi-sign-out"></i>
+      </button>
+    </div>
+  </aside>
+
+  <div class="shell__content">
+    <header class="shell__topbar">
+      <div>
+        <p class="shell__eyebrow">Operations workspace</p>
+        <h2>{{ roleLabel() }}</h2>
+      </div>
+
+      <p-tag
+        *ngIf="user() as currentUser"
+        [value]="currentUser.role | titlecase"
+        severity="info"
+      ></p-tag>
+    </header>
+
+    <main class="shell__main">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

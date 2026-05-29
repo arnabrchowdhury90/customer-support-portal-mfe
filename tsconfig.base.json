@@ -19,7 +19,8 @@
       "admin/Routes": ["./admin/src/app/remote-entry/entry.routes.ts"],
       "analytics/Routes": ["./analytics/src/app/remote-entry/entry.routes.ts"],
       "@customer-support-portal/models": ["./libs/shared/models/src/index.ts"],
-      "@customer-support-portal/auth": ["./libs/shared/auth/src/index.ts"]
+      "@customer-support-portal/auth": ["./libs/shared/auth/src/index.ts"],
+      "@customer-support-portal/ui": ["./libs/shared/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

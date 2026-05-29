@@ -1,22 +1,78 @@
-<section class="login">
-  <h1>Customer Support Portal</h1>
-  <p>Choose a role and sign in for the demo.</p>
+<div class="login-page">
+  <!-- Background glow effects -->
+  <div class="login-page__glow login-page__glow--one"></div>
+  <div class="login-page__glow login-page__glow--two"></div>
 
-  <form [formGroup]="form" (ngSubmit)="submit()">
-    <label>
-      <span>Name</span>
-      <input type="text" formControlName="displayName" />
-    </label>
+  <div class="login-page__shell">
+    <!-- Left side branding -->
+    <div class="login-page__brand">
+      <div class="brand-mark">CS</div>
 
-    <label>
-      <span>Role</span>
-      <select formControlName="role">
-        <option *ngFor="let role of roles" [value]="role">
-          {{ role }}
-        </option>
-      </select>
-    </label>
+      <h1>Customer Support Portal</h1>
 
-    <button type="submit">Login</button>
-  </form>
-</section>
+      <p>
+        Modern Angular microfrontend workspace for support teams.
+      </p>
+
+      <ul>
+        <li>Tickets & SLA Tracking</li>
+        <li>Customer Management</li>
+        <li>Analytics Dashboard</li>
+        <li>Role-Based Access Control</li>
+      </ul>
+    </div>
+
+    <!-- Login form -->
+    <p-card class="login-card">
+      <div class="login-header">
+        <h2>Welcome Back</h2>
+        <p>Select a role and continue</p>
+      </div>
+
+      <form
+        [formGroup]="form"
+        (ngSubmit)="submit()"
+        class="login-form"
+      >
+        <!-- Demo username -->
+        <div class="field">
+          <label for="name">Name</label>
+
+          <input
+            id="name"
+            pInputText
+            formControlName="displayName"
+            placeholder="Enter your name"
+          />
+        </div>
+
+        <!-- Demo role selector -->
+        <div class="field">
+          <label for="role">Role</label>
+
+          <p-select
+            inputId="role"
+            [options]="roles"
+            optionLabel="label"
+            optionValue="value"
+            formControlName="role"
+            placeholder="Select role"
+          />
+        </div>
+
+        <!-- Login action -->
+        <p-button
+          type="submit"
+          label="Login"
+          icon="pi pi-sign-in"
+          styleClass="w-full"
+        />
+      </form>
+
+      <!-- Demo disclaimer -->
+      <div class="login-footer">
+        Demo authentication only
+      </div>
+    </p-card>
+  </div>
+</div>
