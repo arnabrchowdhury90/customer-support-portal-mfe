@@ -13,7 +13,14 @@
     "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "paths": {}
+    "paths": {
+      "tickets/Routes": ["./tickets/src/app/remote-entry/entry.routes.ts"],
+      "customers/Routes": ["./customers/src/app/remote-entry/entry.routes.ts"],
+      "admin/Routes": ["./admin/src/app/remote-entry/entry.routes.ts"],
+      "analytics/Routes": ["./analytics/src/app/remote-entry/entry.routes.ts"],
+      "@customer-support-portal/models": ["./libs/shared/models/src/index.ts"],
+      "@customer-support-portal/auth": ["./libs/shared/auth/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

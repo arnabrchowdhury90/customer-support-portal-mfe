@@ -1,0 +1,65 @@
+.shell {
+  min-height: 100vh;
+  display: flex;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.shell__sidebar {
+  width: 250px;
+  padding: 1.5rem;
+  background: #0f172a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.shell__sidebar h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.shell__sidebar nav {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.shell__sidebar a {
+  color: #cbd5e1;
+  text-decoration: none;
+  padding: 0.7rem 0.85rem;
+  border-radius: 0.75rem;
+}
+
+.shell__sidebar a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.shell__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.shell__topbar {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  background: #fff;
+}
+
+.shell__main {
+  padding: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .shell {
+    flex-direction: column;
+  }
+
+  .shell__sidebar {
+    width: 100%;
+  }
+}

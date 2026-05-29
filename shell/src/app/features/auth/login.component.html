@@ -1,0 +1,22 @@
+<section class="login">
+  <h1>Customer Support Portal</h1>
+  <p>Choose a role and sign in for the demo.</p>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <label>
+      <span>Name</span>
+      <input type="text" formControlName="displayName" />
+    </label>
+
+    <label>
+      <span>Role</span>
+      <select formControlName="role">
+        <option *ngFor="let role of roles" [value]="role">
+          {{ role }}
+        </option>
+      </select>
+    </label>
+
+    <button type="submit">Login</button>
+  </form>
+</section>

@@ -1,0 +1,36 @@
+<section class="dashboard">
+  <div class="dashboard__hero">
+    <p class="dashboard__eyebrow">Welcome</p>
+    <h1>Customer Support Portal</h1>
+    <!-- Current authenticated user -->
+    <div *ngIf="authService.user() as user" class="dashboard__user">
+      <strong>{{ user.name }}</strong>
+      <span>{{ user.role }}</span>
+    </div>
+    <p class="dashboard__copy">
+      A modern Angular microfrontend workspace for tickets, customers, analytics, and admin.
+    </p>
+  </div>
+
+  <div class="dashboard__cards">
+    <article class="dashboard__card">
+      <h2>Tickets</h2>
+      <p>Track and manage support requests.</p>
+    </article>
+
+    <article class="dashboard__card">
+      <h2>Customers</h2>
+      <p>View customer profiles and history.</p>
+    </article>
+
+    <article class="dashboard__card">
+      <h2>Analytics</h2>
+      <p>Monitor workload and support trends.</p>
+    </article>
+
+    <article class="dashboard__card">
+      <h2>Admin</h2>
+      <p>Manage roles, scopes, and access.</p>
+    </article>
+  </div>
+</section>
