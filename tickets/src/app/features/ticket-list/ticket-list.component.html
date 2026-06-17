@@ -1,0 +1,58 @@
+<div class="ticket-page">
+    <div class="ticket-header">
+        <div>
+            <h1>Tickets</h1>
+            <p>
+                Manage and track customer support tickets.
+            </p>
+        </div>
+    </div>
+    <!-- Search and filter -->
+    <div class="ticket-filters">
+        <input pInputText type="text" placeholder="Search by subject..." (input)="onSearch($event)" />
+        <p-select [options]="statusOptions" optionLabel="label" optionValue="value" placeholder="Status"
+            (onChange)="onStatusChange($event.value)">
+        </p-select>
+    </div>
+    <!-- Tickets table -->
+    <p-table [value]="store.filteredTickets()" [paginator]="true" [rows]="5" responsiveLayout="scroll"
+        [loading]="store.loading()">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>ID</th>
+                <th>Subject</th>
+                <th>Customer</th>
+                <th>Status</th>
+                <th>Priority</th>
+                <th>Assignee</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-ticket>
+            <tr>
+                <td>{{ ticket.id }}</td>
+                <td>{{ ticket.subject }}</td>
+                <td>{{ ticket.customer }}</td>
+                <td>
+                    <p-tag [value]="ticket.status" [severity]="
+              ticket.status === 'Open'
+                ? 'danger'
+                : ticket.status === 'In Progress'
+                ? 'warn'
+                : 'success' ">
+                    </p-tag>
+                </td>
+                <td>
+                    <p-tag [value]="ticket.priority" [severity]="
+              ticket.priority === 'High'
+                ? 'danger'
+                : ticket.priority === 'Medium'
+                ? 'warn'
+                : 'info'
+            ">
+                    </p-tag>
+                </td>
+                <td>{{ ticket.assignee }}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

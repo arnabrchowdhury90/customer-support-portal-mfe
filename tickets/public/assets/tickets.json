@@ -1,0 +1,122 @@
+[
+    {
+        "id": "TKT-1001",
+        "subject": "Payment Failed",
+        "customer": "John Smith",
+        "description": "Customer is unable to complete payment using credit card.",
+        "status": "Open",
+        "priority": "High",
+        "assignee": "Arnab",
+        "createdAt": "2026-06-17"
+    },
+    {
+        "id": "TKT-1002",
+        "subject": "Login Issue",
+        "customer": "Sarah Lee",
+        "description": "Customer cannot login after password reset.",
+        "status": "In Progress",
+        "priority": "Medium",
+        "assignee": "Support Team",
+        "createdAt": "2026-06-16"
+    },
+    {
+        "id": "TKT-1003",
+        "subject": "Refund Request",
+        "customer": "Michael Brown",
+        "description": "Customer requested refund for cancelled order.",
+        "status": "Closed",
+        "priority": "Low",
+        "assignee": "Finance Team",
+        "createdAt": "2026-06-15"
+    },
+    {
+        "id": "TKT-1004",
+        "subject": "Account Locked",
+        "customer": "Emma Wilson",
+        "description": "Account locked after multiple failed login attempts.",
+        "status": "Open",
+        "priority": "High",
+        "assignee": "Arnab",
+        "createdAt": "2026-06-14"
+    },
+    {
+        "id": "TKT-1005",
+        "subject": "Email Not Received",
+        "customer": "David Miller",
+        "description": "Verification email not received by customer.",
+        "status": "In Progress",
+        "priority": "Medium",
+        "assignee": "Rahul",
+        "createdAt": "2026-06-13"
+    },
+    {
+        "id": "TKT-1006",
+        "subject": "Address Update",
+        "customer": "Sophia Davis",
+        "description": "Customer wants to update billing address.",
+        "status": "Closed",
+        "priority": "Low",
+        "assignee": "Support Team",
+        "createdAt": "2026-06-12"
+    },
+    {
+        "id": "TKT-1007",
+        "subject": "Order Not Delivered",
+        "customer": "Daniel Garcia",
+        "description": "Customer has not received the order after delivery date.",
+        "status": "Open",
+        "priority": "High",
+        "assignee": "Arnab",
+        "createdAt": "2026-06-11"
+    },
+    {
+        "id": "TKT-1008",
+        "subject": "Coupon Not Working",
+        "customer": "Olivia Martinez",
+        "description": "Discount coupon is showing invalid.",
+        "status": "In Progress",
+        "priority": "Medium",
+        "assignee": "Support Team",
+        "createdAt": "2026-06-10"
+    },
+    {
+        "id": "TKT-1009",
+        "subject": "Subscription Cancellation",
+        "customer": "James Anderson",
+        "description": "Customer wants to cancel the premium subscription.",
+        "status": "Closed",
+        "priority": "Low",
+        "assignee": "Finance Team",
+        "createdAt": "2026-06-09"
+    },
+    {
+        "id": "TKT-1010",
+        "subject": "Duplicate Payment",
+        "customer": "Mia Thomas",
+        "description": "Customer was charged twice for the same order.",
+        "status": "Open",
+        "priority": "High",
+        "assignee": "Arnab",
+        "createdAt": "2026-06-08"
+    },
+    {
+        "id": "TKT-1011",
+        "subject": "Profile Update Failed",
+        "customer": "William Taylor",
+        "description": "Customer unable to save profile changes.",
+        "status": "In Progress",
+        "priority": "Medium",
+        "assignee": "Rahul",
+        "createdAt": "2026-06-07"
+    },
+    {
+        "id": "TKT-1012",
+        "subject": "Invoice Download Issue",
+        "customer": "Ava Jackson",
+        "description": "Customer cannot download invoice PDF.",
+        "status": "Open",
+        "priority": "Low",
+        "assignee": "Support Team",
+        "createdAt": "2026-06-06"
+    }
+]
