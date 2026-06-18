@@ -10,7 +10,8 @@ export class TicketService {
  // Get tickets from local json
  getTickets(): Observable<Ticket[]> {
    return this.http.get<Ticket[]>(
-     'assets/tickets.json'
+    // Temporary url for remote assets
+     'http://localhost:4201/assets/tickets.json'
    );
  }
 }
