@@ -1,0 +1,29 @@
+{
+  "knowledge": [
+    {
+      "id": "customer-support-policy",
+      "file": "customer-support-policy.md",
+      "description": "General customer support guidelines"
+    },
+    {
+      "id": "payment-policy",
+      "file": "payment-policy.md",
+      "description": "Payment related policies"
+    },
+    {
+      "id": "authentication-policy",
+      "file": "authentication-policy.md",
+      "description": "Authentication and login policies"
+    },
+    {
+      "id": "sla-policy",
+      "file": "sla-policy.md",
+      "description": "Service level agreements"
+    },
+    {
+      "id": "team-directory",
+      "file": "team-directory.md",
+      "description": "Available support teams and responsibilities"
+    }
+  ]
+}

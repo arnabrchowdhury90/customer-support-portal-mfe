@@ -15,12 +15,17 @@
         "main": "tickets/src/main.ts",
         "tsConfig": "tickets/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": [
-          {
-            "glob": "**/*",
-            "input": "tickets/public"
-          }
-        ],
+       "assets": [
+            {
+              "glob": "**/*",
+              "input": "tickets/public"
+            },
+            {
+              "glob": "**/*",
+              "input": "tickets/src/assets",
+              "output": "assets"
+            }
+          ],
         "styles": ["tickets/src/styles.scss"],
         "customWebpackConfig": {
           "path": "tickets/webpack.config.ts"
