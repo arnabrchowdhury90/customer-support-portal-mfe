@@ -1,0 +1,111 @@
+<div class="ticket-details" *ngIf="ticket() as ticket">
+    <div class="ticket-details__header">
+        <div>
+            <p class="ticket-details__eyebrow">
+                Ticket Details
+            </p>
+            <h1>
+                {{ ticket.subject }}
+            </h1>
+            <p>
+                Ticket ID : {{ ticket.id }}
+            </p>
+        </div>
+    </div>
+    <p-card>
+        <div class="ticket-details__section">
+            <h3>Customer</h3>
+            <p>
+                {{ ticket.customer }}
+            </p>
+        </div>
+        <div class="ticket-details__section">
+            <h3>Description</h3>
+            <p>
+                {{ ticket.description }}
+            </p>
+        </div>
+        <div class="ticket-details__meta">
+            <div>
+                <span>Status</span>
+                <p-tag [value]="ticket.status" [severity]="
+            ticket.status === 'Open'
+              ? 'danger'
+              : ticket.status === 'In Progress'
+              ? 'warn'
+              : 'success'
+          ">
+                </p-tag>
+            </div>
+            <div>
+                <span>Priority</span>
+                <p-tag [value]="ticket.priority" [severity]="
+            ticket.priority === 'High'
+              ? 'danger'
+              : ticket.priority === 'Medium'
+              ? 'warn'
+              : 'info'
+          ">
+                </p-tag>
+            </div>
+            <div>
+                <span>Assignee</span>
+                <strong>
+                    {{ ticket.assignee }}
+                </strong>
+            </div>
+        </div>
+        <div class="ticket-details__actions">
+            <button pButton type="button" label="AI Analyze" icon="pi pi-sparkles" (click)="analyzeTicket()">
+            </button>
+        </div>
+        <div class="ai-card" *ngIf="aiResponse() as ai">
+            <h2>🤖 AI Decision</h2>
+            <p>
+            <strong>Category:</strong>
+
+                {{ ai.category }}
+            </p>
+            <p>
+            <strong>Priority:</strong>
+
+                {{ ai.priority }}
+            </p>
+            <p>
+            <strong>Assigned Team:</strong>
+
+                {{ ai.assignedTeam }}
+            </p>
+            <p>
+            <strong>Similar Tickets:</strong>
+
+                {{ ai.similarTickets.join(', ') }}
+            </p>
+            <!-- Add here -->
+            <div class="ai-section">
+            <h3>Gemini Recommendation</h3>
+            <pre>{{ ai.aiRecommendation }}</pre>
+            </div>
+            <p>
+            <strong>Root Cause:</strong>
+
+                {{ ai.rootCause }}
+            </p>
+            <div>
+            <strong>Resolution:</strong>
+            <ul>
+            <li *ngFor="let step of ai.resolution">
+
+                    {{ step }}
+            </li>
+            </ul>
+            </div>
+            <p>
+            <strong>Escalation:</strong>
+
+                {{ ai.escalation ? 'Yes' : 'No' }}
+            </p>
+            </div>
+            
+    </p-card>
+</div>

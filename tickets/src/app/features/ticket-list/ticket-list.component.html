@@ -25,6 +25,7 @@
                 <th>Status</th>
                 <th>Priority</th>
                 <th>Assignee</th>
+                <th>Action</th>
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-ticket>
@@ -52,6 +53,11 @@
                     </p-tag>
                 </td>
                 <td>{{ ticket.assignee }}</td>
+                <td>
+                    <a [routerLink]="[ticket.id]" label="View" icon="pi pi-eye" outlined="true">
+                        View
+                    </a>
+                </td>
             </tr>
         </ng-template>
     </p-table>

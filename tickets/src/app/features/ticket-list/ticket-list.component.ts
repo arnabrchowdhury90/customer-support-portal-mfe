@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, effect, inject } from '@angular/core';
+import {ButtonModule} from 'primeng/button';
 import { FormsModule } from '@angular/forms';
 import { TableModule } from 'primeng/table';
 import { TagModule } from 'primeng/tag';
 import { InputTextModule } from 'primeng/inputtext';
 import { SelectModule } from 'primeng/select';
 import { TicketStore } from '../../store/ticket.store';
+import { RouterLink } from '@angular/router';
 
 @Component({
   standalone: true,
@@ -16,7 +18,9 @@ import { TicketStore } from '../../store/ticket.store';
     TableModule,
     TagModule,
     InputTextModule,
-    SelectModule
+    SelectModule,
+    ButtonModule,
+    RouterLink
   ],
   templateUrl: './ticket-list.component.html',
   styleUrl: './ticket-list.component.scss'
